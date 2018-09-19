@@ -1,3 +1,10 @@
+<?php session_start();
+$section= $_SESSION['user'];
+if (isset($_SESSION['user'])) {
+	header('location:index.php');
+}
+$create_file = fopen($section.".txt", "a");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
